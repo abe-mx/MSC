@@ -28,7 +28,7 @@ void printMatrix (float ** m,int rows, int cols) {
     for (i = 0; i < rows; i++) {
       printf("[");
       for(j = 0; j < cols; j++){
-        printf("%5.2f ",m[i][j]);
+        printf("%7.2f ",m[i][j]);
       }
       printf("]\n");
     }
