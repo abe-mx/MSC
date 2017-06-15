@@ -5,10 +5,10 @@
 
 void initMatrix (float *** m, int rows, int cols) {
   // creating the matrix
-  *m = (float**) malloc(rows * sizeof(float *));
+  *m = (float**) calloc(rows, sizeof(float *));
   printf("\nOK1(%d) ",rows);
   for (int i = 0; i < rows; i++) {
-    *m[i] = (float*) malloc(cols * sizeof(float));
+    *m[i] = (float*) calloc(cols, sizeof(float));
     printf("\nOK2(%d) ",i);
   }
   printf("\nBye!");
