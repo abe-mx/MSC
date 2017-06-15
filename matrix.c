@@ -77,9 +77,9 @@ int main() {
   // populating the first matrix
   printf("\n+ Give me the values for the first matrix...");
   for(i = 0; i < rows; i++) {
-    printf("\n(%d)",i);
+    printf("\n(%d) : ",i);
     for(j = 0; j < colsrows; j++){
-      printf("\n  (%d)",j);
+      printf("\n  (%d) : ",j);
       scanf("%c",&m1[i][j]);
     }
   }
