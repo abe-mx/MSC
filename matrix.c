@@ -5,6 +5,8 @@
 
 void initMatrix (float *** m, int rows, int cols) {
   // creating the matrix
+  int i;
+
   *m = (float**) calloc(rows, sizeof(float *));
   if (*m != NULL)
     printf("\nOK1(%d) ",rows);
@@ -13,7 +15,7 @@ void initMatrix (float *** m, int rows, int cols) {
     exit(1);
   }
 
-  for (int i = 0; i < rows; i++) {
+  for (i = 0; i < rows; i++) {
     *m[i] = (float*) calloc(cols, sizeof(float));
     printf("\nOK2(%d) ",i);
   }
@@ -21,11 +23,12 @@ void initMatrix (float *** m, int rows, int cols) {
 }
 
 void printMatrix (float ** m,int rows, int cols) {
+  int i,j;
   if (m) {
     printf("\nOK3");
-    for (int i = 0; i < rows; i++) {
+    for (i = 0; i < rows; i++) {
       printf("\n(%d)",i);
-      for(int j = 0; j < cols; j++){
+      for(j = 0; j < cols; j++){
         printf("\n  (%d)",j);
         printf("%c ",m[i][j]);
       }
@@ -50,6 +53,7 @@ int main() {
   int colsrows;
   int cols2;
   float ** m1 = NULL;
+  int i, j;
   /*float ** m2 = NULL; */
 
   printf("Rows for the first matrix: ");
@@ -72,9 +76,9 @@ int main() {
 */
   // populating the first matrix
   printf("\n+ Give me the values for the first matrix...");
-  for(int i = 0; i < rows; i++) {
+  for(i = 0; i < rows; i++) {
     printf("\n(%d)",i);
-    for(int j = 0; j < colsrows; j++){
+    for(j = 0; j < colsrows; j++){
       printf("\n  (%d)",j);
       scanf("%c",&m1[i][j]);
     }
@@ -83,9 +87,9 @@ int main() {
 /*
   // populating the second matrix
   printf("\n+Now give me the values for the second matrix:");
-  for (int i = 0; i < colsrows; i++) {
+  for (i = 0; i < colsrows; i++) {
     printf("\n(%d)",i);
-    for(int j = 0; j < cols2; j++){
+    for(j = 0; j < cols2; j++){
       printf("\n  (%d)",i);
       scanf("%c",&m2[i][j]);
     }
