@@ -56,7 +56,7 @@ int main() {
   //creating the matrixes
   //  first matrix: rows:a, cols:b
   // second matrix: rows:b, cols:c
-  static unsigned char ** m1 = NULL;
+  unsigned char ** m1 = NULL;
   initMatrix (&m1, rows, colsrows);
   printf("\nm1 (%d,%d)is OK",rows,colsrows);
 /*
