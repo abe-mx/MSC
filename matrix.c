@@ -25,13 +25,12 @@ void initMatrix (float *** m, int rows, int cols) {
 void printMatrix (float ** m,int rows, int cols) {
   int i,j;
   if (m) {
-    printf("\nOK3");
     for (i = 0; i < rows; i++) {
-      printf("\n(%d)",i);
+      printf("[");
       for(j = 0; j < cols; j++){
-        printf("\n  (%d)",j);
         printf("%5.2f ",m[i][j]);
       }
+      printf("]\n");
     }
   } else {
     printf("\nPointer is null");
