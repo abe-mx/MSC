@@ -43,6 +43,8 @@ int main() {
   int rows;
   int colsrows;
   int cols2;
+  float ** m1 = NULL;
+  /*float ** m2 = NULL; */
 
   printf("Rows for the first matrix: ");
   scanf("%d",&rows);
@@ -56,11 +58,9 @@ int main() {
   //creating the matrixes
   //  first matrix: rows:a, cols:b
   // second matrix: rows:b, cols:c
-  float ** m1 = NULL;
   initMatrix (&m1, rows, colsrows);
   printf("\nm1 (%d,%d)is OK",rows,colsrows);
 /*
-  static float ** m2 = NULL;
   initMatrix (m2, colsrows, cols2);
   printf("\nm2 (%d,%d)is OK",colsrows,cols2);
 */
