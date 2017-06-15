@@ -6,7 +6,13 @@
 void initMatrix (float *** m, int rows, int cols) {
   // creating the matrix
   *m = (float**) calloc(rows, sizeof(float *));
-  printf("\nOK1(%d) ",rows);
+  if (*m != NULL)
+    printf("\nOK1(%d) ",rows);
+  else {
+    fprintf(stderr,"No hay suficinte memoria");
+    exit(1);
+  }
+
   for (int i = 0; i < rows; i++) {
     *m[i] = (float*) calloc(cols, sizeof(float));
     printf("\nOK2(%d) ",i);
