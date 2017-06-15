@@ -9,7 +9,7 @@ void initMatrix (float *** m, int rows, int cols) {
   if (*m != NULL)
     printf("\nOK1(%d) ",rows);
   else {
-    fprintf(stderr,"No hay suficinte memoria");
+    fprintf(stderr,"No hay suficinte memoria\n");
     exit(1);
   }
 
