@@ -7,7 +7,7 @@ void initMatrix (float *** m, int rows, int cols) {
   // creating the matrix
   int i;
 
-  *m = (float**) calloc(rows, sizeof(float *));
+  *m = calloc(rows, sizeof(float *));
   if (*m != NULL)
     printf("\nOK1(%d) ",rows);
   else {
@@ -16,7 +16,7 @@ void initMatrix (float *** m, int rows, int cols) {
   }
 
   for (i = 0; i < rows; i++) {
-    *m[i] = (float*) calloc(cols, sizeof(float));
+    (*m)[i] = calloc(cols, sizeof(float));
     printf("\nOK2(%d) ",i);
   }
   printf("\nBye!");
@@ -70,6 +70,8 @@ int main() {
   // second matrix: rows:b, cols:c
   initMatrix (&m1, rows, colsrows);
   printf("\nm1 (%d,%d)is OK",rows,colsrows);
+
+
 /*
   initMatrix (m2, colsrows, cols2);
   printf("\nm2 (%d,%d)is OK",colsrows,cols2);
