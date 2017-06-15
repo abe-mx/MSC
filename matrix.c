@@ -41,14 +41,15 @@ void multMatrix (unsigned char ** m1, unsigned char ** m2, unsigned char ** m3, 
 int main() {
   // get matrix sizes
   int a;
+  int b;
+  int c;
+
   printf("Rows for the first matrix: ");
   scanf("%d",&a);
 
-  int b;
   printf("Cols for the first matrix / Rows for the second matrix: ");
   scanf("%d",&b);
 
-  int c;
   printf("Cols for the second matrix: ");
   scanf("%d",&c);
 
