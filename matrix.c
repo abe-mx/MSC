@@ -80,7 +80,7 @@ int main() {
     printf("\n(%d) : ",i);
     for(j = 0; j < colsrows; j++){
       printf("\n  (%d) : ",j);
-      scanf("%c",&m1[i][j]);
+      scanf("%f",&m1[i][j]);
     }
   }
   printMatrix(m1, rows, colsrows);
@@ -91,7 +91,7 @@ int main() {
     printf("\n(%d)",i);
     for(j = 0; j < cols2; j++){
       printf("\n  (%d)",i);
-      scanf("%c",&m2[i][j]);
+      scanf("%f",&m2[i][j]);
     }
   }
   printMatrix(m2, colsrows, cols2);
