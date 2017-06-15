@@ -29,10 +29,10 @@ void printMatrix (unsigned char ** m,int rows, int cols) {
   }
 }
 
-void multMatrix (unsigned char ** m1, unsigned char ** m2, unsigned char ** m3, int a, int b, int c) {
-  if (!(a > 1 && b > 1 && c > 1)) {
+void multMatrix (unsigned char ** m1, unsigned char ** m2, unsigned char ** m3, int rows, int colsrows, int cols2) {
+  if (!(rows > 1 && colsrows > 1 && cols2 > 1)) {
     m3 = NULL;
-    printf("\n a, b, c must be greater than 1");
+    printf("\n rows, colsrows, cols2 must be greater than 1");
   } else {
 
   }
@@ -40,51 +40,51 @@ void multMatrix (unsigned char ** m1, unsigned char ** m2, unsigned char ** m3, 
 }
 int main() {
   // get matrix sizes
-  int a;
-  int b;
-  int c;
+  int rows;
+  int colsrows;
+  int cols2;
 
   printf("Rows for the first matrix: ");
-  scanf("%d",&a);
+  scanf("%d",&rows);
 
   printf("Cols for the first matrix / Rows for the second matrix: ");
-  scanf("%d",&b);
+  scanf("%d",&colsrows);
 
   printf("Cols for the second matrix: ");
-  scanf("%d",&c);
+  scanf("%d",&cols2);
 
   //creating the matrixes
   //  first matrix: rows:a, cols:b
   // second matrix: rows:b, cols:c
   static unsigned char ** m1 = NULL;
-  initMatrix (&m1, a, b);
-  printf("\nm1 (%d,%d)is OK",a,b);
+  initMatrix (&m1, rows, colsrows);
+  printf("\nm1 (%d,%d)is OK",rows,colsrows);
 /*
   static unsigned char ** m2 = NULL;
-  initMatrix (m2, b, c);
-  printf("\nm2 (%d,%d)is OK",b,c);
+  initMatrix (m2, colsrows, cols2);
+  printf("\nm2 (%d,%d)is OK",colsrows,cols2);
 */
   // populating the first matrix
   printf("\n+ Give me the values for the first matrix...");
-  for(int i = 0; i < a; i++) {
+  for(int i = 0; i < rows; i++) {
     printf("\n(%d)",i);
-    for(int j = 0; j < b; j++){
+    for(int j = 0; j < colsrows; j++){
       printf("\n  (%d)",j);
       scanf("%c",&m1[i][j]);
     }
   }
-  printMatrix(m1, a, b);
+  printMatrix(m1, rows, colsrows);
 /*
   // populating the second matrix
   printf("\n+Now give me the values for the second matrix:");
-  for (int i = 0; i < b; i++) {
+  for (int i = 0; i < colsrows; i++) {
     printf("\n(%d)",i);
-    for(int j = 0; j < c; j++){
+    for(int j = 0; j < cols2; j++){
       printf("\n  (%d)",i);
       scanf("%c",&m2[i][j]);
     }
   }
-  printMatrix(m2, b, c);
+  printMatrix(m2, colsrows, cols2);
 */
   getchar();
   return 0;
