@@ -3,7 +3,7 @@ SOURCES=$(wildcard *.c)
 OBJECTS=$(SOURCES:%.c=%.o)
 TARGET=matrices
 
-CFLAGS+= -Wall -Wextra
+CFLAGS= -g -ggdb -Wall -Wextra -o0
 
 .PHONY: all
 all: $(TARGET)
