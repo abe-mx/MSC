@@ -3,18 +3,18 @@
 #include <math.h>
 #include <stdlib.h>
 
-void initMatrix (unsigned char *** m, int rows, int cols) {
+void initMatrix (float *** m, int rows, int cols) {
   // creating the matrix
-  *m = (unsigned char**) malloc(rows * sizeof(unsigned char *));
+  *m = (float**) malloc(rows * sizeof(float *));
   printf("\nOK1(%d) ",rows);
   for (int i = 0; i < rows; i++) {
-    *m[i] = (unsigned char*) malloc(cols * sizeof(unsigned char));
+    *m[i] = (float*) malloc(cols * sizeof(float));
     printf("\nOK2(%d) ",i);
   }
   printf("\nBye!");
 }
 
-void printMatrix (unsigned char ** m,int rows, int cols) {
+void printMatrix (float ** m,int rows, int cols) {
   if (m) {
     printf("\nOK3");
     for (int i = 0; i < rows; i++) {
@@ -29,7 +29,7 @@ void printMatrix (unsigned char ** m,int rows, int cols) {
   }
 }
 
-void multMatrix (unsigned char ** m1, unsigned char ** m2, unsigned char ** m3, int rows, int colsrows, int cols2) {
+void multMatrix (float ** m1, float ** m2, float ** m3, int rows, int colsrows, int cols2) {
   if (!(rows > 1 && colsrows > 1 && cols2 > 1)) {
     m3 = NULL;
     printf("\n rows, colsrows, cols2 must be greater than 1");
@@ -56,11 +56,11 @@ int main() {
   //creating the matrixes
   //  first matrix: rows:a, cols:b
   // second matrix: rows:b, cols:c
-  unsigned char ** m1 = NULL;
+  float ** m1 = NULL;
   initMatrix (&m1, rows, colsrows);
   printf("\nm1 (%d,%d)is OK",rows,colsrows);
 /*
-  static unsigned char ** m2 = NULL;
+  static float ** m2 = NULL;
   initMatrix (m2, colsrows, cols2);
   printf("\nm2 (%d,%d)is OK",colsrows,cols2);
 */
